@@ -1,0 +1,29 @@
+name: Build iOS IPA
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Instalar workload MAUI
+        run: dotnet workload install maui
+
+      - name: Gerar IPA
+        run: |
+          dotnet publish -f net9.0-ios -c Release \
+            -p:RuntimeIdentifier=ios-arm64 \
+            -p:BuildIpa=true \
+            -p:CodesignRequireProvisioningProfile=false \
+            -p:EnableCodeSigning=false
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ipa
+          path: "**/*.ipa"
