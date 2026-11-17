@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>LSRequiresIPhoneOS</key>
+		<true/>
+		<key>UIDeviceFamily</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+		</array>
+		<key>UIRequiredDeviceCapabilities</key>
+		<array>
+			<string>arm64</string>
+		</array>
+		<key>UISupportedInterfaceOrientations</key>
+		<array>
+			<string>UIInterfaceOrientationPortrait</string>
+			<string>UIInterfaceOrientationLandscapeLeft</string>
+			<string>UIInterfaceOrientationLandscapeRight</string>
+		</array>
+		<key>UISupportedInterfaceOrientations~ipad</key>
+		<array>
+			<string>UIInterfaceOrientationPortrait</string>
+			<string>UIInterfaceOrientationPortraitUpsideDown</string>
+			<string>UIInterfaceOrientationLandscapeLeft</string>
+			<string>UIInterfaceOrientationLandscapeRight</string>
+		</array>
+		<key>XSAppIconAssets</key>
+		<string>Assets.xcassets/appicon.appiconset</string>
+		<key>CFBundleDocumentTypes</key>
+		<array>
+			<dict>
+				<key>CFBundleTypeName</key>
+				<string>Tipo de Documento 1</string>
+			</dict>
+		</array>
+		<key>UIStatusBarStyle</key>
+		<string>UIStatusBarStyleLightContent</string>
+
+		<!-- ✅ PERMISSÕES ADICIONADAS AQUI (COLE ESTES BLOCOS ANTES DO FECHAMENTO </dict>) -->
+
+		<key>NSCameraUsageDescription</key>
+		<string>O aplicativo precisa acessar a câmera para renderizar os gráficos do overlay em tempo real.</string>
+
+		<key>NSMicrophoneUsageDescription</key>
+		<string>Necessário para capturar o áudio do sistema durante o overlay.</string>
+
+		<key>NSPhotoLibraryAddUsageDescription</key>
+		<string>Necessário para salvar capturas de tela do overlay.</string>
+
+		<key>NSLocalNetworkUsageDescription</key>
+		<string>Permitir conexão local para sincronização de dados.</string>
+
+		<key>UIBackgroundModes</key>
+		<array>
+			<string>audio</string>
+			<string>fetch</string>
+		</array>
+
+	</dict>
+</plist>
